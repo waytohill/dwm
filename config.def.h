@@ -106,12 +106,12 @@ static const char *dmenucmd[] = {
     "-nb", col_bg, 
     "-nf", col_fg, 
     "-sb", col_accent, 
-    "-sf", col_fg, 
+    "-sf", col_bg, 
     NULL 
 };
 static const char *termcmd[]  = { "kitty", NULL };
 
-static const char *calccmd[]  = { "dmenu_run", "-C", "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_accent, "-sf", col_fg, NULL };
+static const char *calccmd[]  = { "dmenu_run", "-C", "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_accent, "-sf", col_bg, NULL };
 
 /* 使用 pactl (PulseAudio/PipeWire) 或 amixer (ALSA) */
 static const char *upvol[]   = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+1%", NULL };
