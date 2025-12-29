@@ -5,31 +5,31 @@
 /* appearance */
 static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int gappih    = 7;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 7;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 7;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 7;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 10;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 
-static const int vertpad = 7;
-static const int sidepad = 7;
+static const int vertpad = 10;
+static const int sidepad = 10;
 
 static const char *fonts[]          = { "Source Code Pro:size=10", "LXGW Wenkai:size=10", "Symbols Nerd Font:size=9" };
 static const char dmenufont[]       = "Source Code Pro:size=10";
 
-static const char col_bg[]          = "#10141C"; /* 深邃蓝黑背景 */
-static const char col_fg[]          = "#E0E6ED"; /* 亮银灰字体 */
-static const char col_gray_border[] = "#2E3440"; /* 未选中窗口边框 (低调) */
-static const char col_nudt_blue[]   = "#176CA5"; /* 主题蓝 (选中窗口/高亮) */
-static const char col_nudt_red[]    = "#C0392B"; /* 紧急状态红 (警告/错误) */
+static const char col_bg[]          = "#1e1e2e"; /*  */
+static const char col_fg[]          = "#cdd6f4"; /*  */
+static const char col_gray_border[] = "#45475a"; /* 未选中窗口边框 (低调) */
+static const char col_accent[]   = "#f5c2e7"; /*  (选中窗口/高亮) */
+static const char col_red[]    = "#f38ba8"; /* 紧急状态红 (警告/错误) */
 
 static const char *colors[][3]      = {
     /* fg         bg         border   */
     [SchemeNorm] = { col_fg,    col_bg,    col_gray_border },
-    [SchemeSel]  = { col_fg,    col_nudt_blue, col_nudt_blue }, /* 选中状态：蓝底白字，蓝边框 */
-    [SchemeUrg]  = { col_fg,    col_nudt_red,  col_nudt_red },
+    [SchemeSel]  = { col_accent,    col_bg, col_accent }, /* 选中状态：蓝底白字，蓝边框 */
+    [SchemeUrg]  = { col_fg,    col_red,  col_red },
 };
 
 const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
@@ -105,13 +105,13 @@ static const char *dmenucmd[] = {
     "-fn", dmenufont, 
     "-nb", col_bg, 
     "-nf", col_fg, 
-    "-sb", col_nudt_blue, 
+    "-sb", col_accent, 
     "-sf", col_fg, 
     NULL 
 };
 static const char *termcmd[]  = { "kitty", NULL };
 
-static const char *calccmd[]  = { "dmenu_run", "-C", "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_nudt_blue, "-sf", col_fg, NULL };
+static const char *calccmd[]  = { "dmenu_run", "-C", "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_accent, "-sf", col_fg, NULL };
 
 /* 使用 pactl (PulseAudio/PipeWire) 或 amixer (ALSA) */
 static const char *upvol[]   = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "+1%", NULL };
