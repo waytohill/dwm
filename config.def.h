@@ -16,7 +16,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int vertpad = 10;
 static const int sidepad = 10;
 
-static const char *fonts[]          = { "Source Code Pro:size=10", "LXGW Wenkai:size=10", "Symbols Nerd Font:size=9" };
+static const char *fonts[]          = { "Source Code Pro:size=10", "Noto Color Emoji:style=Regular:pixelsize=14:antialias=true:autohint=true", "LXGW Wenkai:size=10" };
 static const char dmenufont[]       = "Source Code Pro:size=10";
 
 static const char col_bg[]          = "#1e1e2e"; /*  */
